@@ -5,15 +5,18 @@
 
     <body>
 
-        <ui:composition template="./WEB-INF/templates/template_defaut.xhtml">
+        <ui:composition template="./template_defaut.xhtml">
 
-            <ui:define name="top">
-                Présentation des exercices du TP PRG
+            <ui:define name="metadata">
+                metadata
+            </ui:define>
+
+            <ui:define name="complementTitreEtH1">
+                Accueil
             </ui:define>
 
             <ui:define name="content">
-                <p>Cette application présente plusieurs exercices qui illustrent le modèle PRG.</p>
-                <p>Choisissez votre exercice dans le menu de gauche.</p>
+                content
             </ui:define>
 
         </ui:composition>

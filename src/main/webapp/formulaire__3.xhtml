@@ -4,22 +4,20 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
 
-
     <body>
 
         <ui:composition template="./template_defaut.xhtml">
-            <ui:param name="titre" value="Exercice 1"/>
+            <ui:param name="titre" value="Exercice 3"/>
+
 
             <ui:define name="content">
-                <h1>TP PRG > Exercice 1</h1>
+                <h1>TP PRG > Exercice 3</h1>
 
                 <h:form>
                     <h:outputLabel value="Entrez un nombre" for="nombre"/>
-                    <h:inputText id="nombre" value="#{bean4.nombre}"/>
-                    <h:message for="nombre"/>
-                    <h:commandButton value="Valider" action="affichage__1"/>
+                    <h:inputText id="nombre" value="#{bean.nombre}"/>
+                    <h:commandButton value="Valider" action="#{bean.afficher3()}"/>
                 </h:form>
-
             </ui:define>
 
         </ui:composition>

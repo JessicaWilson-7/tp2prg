@@ -6,7 +6,7 @@
 
     <body>
 
-        <ui:composition template="./WEB-INF/templates/template_defaut.xhtml">
+        <ui:composition template="./template_defaut.xhtml">
 
             <ui:define name="top">
                 TP PRG > Exercice 1
@@ -15,7 +15,7 @@
             <ui:define name="content">
                  <h1>TP PRG > Exercice 1</h1>
         Les nombres : <br/>
-        <ui:repeat value="#{bean.nombresSuivants}" var="n" varStatus="status">
+        <ui:repeat value="#{bean4.nombresSuivants}" var="n" varStatus="status">
             #{n + 1}#{! status.last ? ', ' : ''}
         </ui:repeat>
         <br/>
