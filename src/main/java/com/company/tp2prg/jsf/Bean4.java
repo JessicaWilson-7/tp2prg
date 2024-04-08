@@ -43,4 +43,8 @@ public class Bean4 {
             return "affichage_4?faces-redirect=true";
         }
     }
+    
+     public String afficher4() {
+        return "affichage__4?nb="+ nombre + "&amp;faces-redirect=true";
+    }
 }
