@@ -10,31 +10,14 @@
     </h:head>
     <h:body>
 
-        <ui:composition template="./template_defaut.xhtml">
+        <ui:composition template="./template_affichage.xhtml">
+            <ui:param name="numEx" value="4"/>
+            <ui:param name="query" value="?nb=#{bean4.nombre}&amp;faces-redirect=true"/>
 
             <ui:define name="metadata">
                 <f:metadata>
                     <f:viewParam name="nb" value="#{bean4.nombre}"/>
                 </f:metadata>
-            </ui:define>
-
-            <ui:define name="top">
-                TP PRG > Exercice 4
-            </ui:define>
-
-            <ui:define name="content">
-                <h1>TP PRG > Exercice 4</h1>
-
-                Les nombres : <br/>
-                <ui:repeat value="#{bean4.nombresSuivants}" var="n" varStatus="status">
-                    #{n + 1}#{! status.last ? ', ' : ''}
-                </ui:repeat>
-                <p/>
-
-                <h:link outcome="formulaire__4" value="Saisir un autre nombre">
-                    <f:param name="nb" value="#{bean4.nombre}"/>
-                </h:link>
-
             </ui:define>
 
         </ui:composition>

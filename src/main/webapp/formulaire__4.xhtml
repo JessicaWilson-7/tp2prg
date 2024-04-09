@@ -10,24 +10,16 @@
     </h:head>
     <h:body>
 
-        <ui:composition template="./template_defaut.xhtml">
+        <ui:composition template="./template_formulaire.xhtml">
             <ui:param name="titre" value="Exercice 4"/>
+            <ui:param name="numEx" value="4"/>
+            <ui:param name="query" value="?nb=#{bean4.nombre}&amp;faces-redirect=true"/>
 
 
             <ui:define name="metadata">
                 <f:metadata>
                     <f:viewParam name="nb" value="#{bean4.nombre}"/>
                 </f:metadata>
-            </ui:define>
-
-            <ui:define name="content">
-                <h1>TP PRG > Exercice 4</h1>
-
-                <h:form>
-                    <h:outputLabel value="Entrez un nombre" for="nombre"/>
-                    <h:inputText id="nombre" value="#{bean4.nombre}"/>
-                    <h:commandButton value="Valider" action="#{bean4.afficher4()}"/>
-                </h:form>
             </ui:define>
 
         </ui:composition>

@@ -44,12 +44,16 @@ public class Bean4 {
         }
     }
 
+    public String afficher3() {
+        return "affichage__3?nb=" + nombre + "&amp;faces-redirect=true";
+    }
+
     public String afficher4() {
         return "affichage__4?nb=" + nombre + "&amp;faces-redirect=true";
     }
 
     public String actionString(String base, String numEx, String query) {
-        return base + "__" + numEx + ".xhtml" + (query != null ? "?" + query : "");
+        return base + "__" + numEx + ".xhtml" + query;
     }
 
 }

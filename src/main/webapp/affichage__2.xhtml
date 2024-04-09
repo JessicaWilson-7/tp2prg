@@ -1,27 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
     <body>
 
-        <ui:composition template="./template_defaut.xhtml">
-
-            <ui:define name="top">
-                TP PRG > Exercice 2
-            </ui:define>
-
-            <ui:define name="content">
-                <h1>TP PRG > Exercice 2</h1>
-                Les nombres : <br/>
-                <ui:repeat value="#{bean4.nombresSuivants}" var="n" varStatus="status">
-                    #{n + 1}#{! status.last ? ', ' : ''}
-                </ui:repeat>
-                <br/>
-                <h:link outcome="formulaire__2" value="Saisir un autre nombre"/>
-            </ui:define>
-
+        <ui:composition template="./template_affichage.xhtml">
+            <ui:param name="numEx" value="2"/>
+            <ui:param name="query" value=""/>
         </ui:composition>
 
     </body>
